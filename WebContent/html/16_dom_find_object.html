@@ -54,12 +54,12 @@
 					}
 				}
 				
-				var inputHobby = document.querySelectorAll("#joinForm input[name=hooby]");
-				var inputHobbyChecked = document.querySelectorAll("#joinForm input[name=hooby]:checked");
+				var inputHobby = document.querySelectorAll("#joinForm input[name=hobby]");
+				var inputHobbyChecked = document.querySelectorAll("#joinForm input[name=hobby]:checked");
 				<!--console.log(inputMid);-->
 				<!--console.log(inputHobby);-->
 				<!--console.log(inputHobbyChecked);-->
-				for (var i=0; i<inputHobbyChecked; i++) {
+				for (var i=0; i<inputHobbyChecked.length; i++) {
 					console.log(inputHobbyChecked[i].value);
 					
 				}
@@ -67,11 +67,11 @@
 			
 			
 			function fun6() {
-				var form = document.joimForm; <!-- 폼에서만 할 수 있음 -->
-				var mid = document.joimForm.mid.value;
+				var form = document.joinForm; <!-- 폼에서만 할 수 있음 -->
+				var mid = document.joinForm.mid.value;
 				console.log("mid: " + mid);
 				
-				var mpassword = document.joimForm.password.value;
+				var mpassword = document.joinForm.mpassword.value;
 				console.log("mpassword: " + mpassword);
 				
 			}

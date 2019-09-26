@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"> </script>
+<script type="text/javascript">
+function fun1() {
+	
+	var img1 = $("#img1")
+	img1.attr("src", "../common/img/Lighthouse.jpg");
+	
+	console.log(jqueryImg1);
+	
+}
+
+function fun2() {
+	
+	var img2 = $(".img2")
+	img2.attr("src", "../common/img/Lighthouse.jpg");
+	
+	console.log(jqueryImg1);
+	
+}
+
+function fun3() {
+	
+	var imgList = $("img")
+	imgList.attr("src", "../common/img/Tulips.jpg");
+	
+	console.log(jqueryImg1);
+	
+}
+
+function fun4() {
+
+	$("#div1 img").attr("src", "../common/img/Chrysanthemum.jpg");
+
+}
+
+function fun5() {
+	var inputMid = $("#joinForm input[name=mid]");
+	console.log(inputMid.val());
+	
+	var inputPass = $("#joinForm input[name=mpassword]");
+	var password = inputPass.val();
+	if (password == "") {
+		window.alert("패스워드 안 넣을래?")
+	} else {
+		if (password.length < 8) {
+			window.alert("패스워드 똑바로 안 넣을래?")
+		} else {
+			console.log(password);
+		}
+	}
+	
+	var inputHobby = $("#joinForm input[name=hobby]");
+	var inputHobbyChecked = $("#joinForm input[name=hobby]:checked");
+	<!--console.log(inputMid);-->
+	<!--console.log(inputHobby);-->
+	<!--console.log(inputHobbyChecked);-->
+	<!--console.log(inputHobbyChecked.val());-->
+	
+	for (var i=0; i<inputHobbyChecked.length; i++) {
+		console.log(inputHobbyChecked[i].value);
+		
+	}
+}
+
+
+</script>
+
+</head>
+<body>
+	
+		<button onclick="fun1()">아이디로 찾기</button> <br/>
+		<button onclick="fun2()">클래스로 찾기</button> <br/>
+		<button onclick="fun3()">Tag명으로로 찾기</button> <br/>
+		<button onclick="fun4()">내부 찾기</button> <br/>
+		<button onclick="fun5()">form 양식 찾기</button> <br/>
+		
+		
+		<!--아이디로 찾기-->
+		<img id="img1" src="../common/img/Desert.jpg" width=200px;>
+		<br/>
+		
+		<!--클래스로 찾기-->
+		<img class="img2" src="../common/img/Desert.jpg" width=200px;>
+		<br/>
+		<img class="img2" src="../common/img/Desert.jpg" width=200px;>
+		<br/>
+		
+		<!--Tag명의로 찾기-->
+		
+		
+		<div id=div1>
+		<img src="../common/img/Desert.jpg" width=200px;>
+		<br/>
+		<img src="../common/img/Desert.jpg" width=200px;>
+		<br/>
+		</div>
+		
+		
+		
+		<form id="joinForm" name="joinForm">
+			아이디: <input name="mid" type="text"/><br/>	
+			비밀번: <input name="mpassword" type="password"/><br/>	
+			취미: 
+				<input name="hobby" type="checkbox" value="movie"/>영화<br/>
+				<input name="hobby" type="checkbox" value="trip"/>여행<br/>
+				<input name="hobby" type="checkbox" value="coding"/>코딩<br/>
+		</form>
+		
+		
+	</body>
+</html>
